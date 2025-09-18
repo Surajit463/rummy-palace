@@ -164,23 +164,31 @@
             animation: pulse 1.5s infinite;
         }
         
-        .girls-showcase {
+        /* Games Showcase Styles */
+        .games-showcase {
             border-radius: 15px;
             overflow: hidden;
             position: relative;
             margin: 15px 0;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             transition: all 0.3s;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
         }
         
-        .girls-showcase:hover {
+        .games-showcase:hover {
             transform: scale(1.03);
         }
         
-        .girls-showcase img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        .game-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
         
         .overlay-text {
@@ -191,6 +199,43 @@
             background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
             padding: 15px;
             color: white;
+            text-align: center;
+        }
+        
+        .more-games {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Game-specific backgrounds */
+        .game-jhandi {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+        
+        .game-dragon {
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+        }
+        
+        .game-ludo {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        
+        .game-carrom {
+            background: linear-gradient(135deg, #ff9a9e 0%, #f6416c 100%);
+        }
+        
+        .game-poker {
+            background: linear-gradient(135deg, #00dbde 0%, #fc00ff 100%);
+        }
+        
+        .game-teen {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
         }
         
         /* Responsive adjustments */
@@ -206,6 +251,14 @@
             .btn-download {
                 padding: 15px 30px;
                 font-size: 1.2rem;
+            }
+            
+            .games-showcase {
+                height: 180px;
+            }
+            
+            .game-icon {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -231,32 +284,63 @@
             
             <div class="row mt-4">
                 <div class="col-md-4 mb-3">
-                    <div class="girls-showcase">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8JTIwcG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=80" alt="Happy Player">
-                        <div class="overlay-text">
-                            <h5>Priya, Kolkata</h5>
-                            <p>Won ₹15,000 in first week!</p>
+                    <div class="games-showcase game-jhandi">
+                        <div class="game-icon">
+                            <i class="fas fa-dice-six"></i>
                         </div>
+                        <h4>Jhandi Munda</h4>
+                        <p>Classic Dice Game</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="girls-showcase">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=80" alt="Happy Player">
-                        <div class="overlay-text">
-                            <h5>Anjali, Delhi</h5>
-                            <p>Earns ₹8,000 weekly playing rummy</p>
+                    <div class="games-showcase game-dragon">
+                        <div class="game-icon">
+                            <i class="fas fa-dragon"></i>
                         </div>
+                        <h4>Dragon Tiger</h4>
+                        <p>Fast-paced Card Game</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="girls-showcase">
-                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8JTIwcG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=80" alt="Happy Player">
-                        <div class="overlay-text">
-                            <h5>Neha, Mumbai</h5>
-                            <p>Won ₹1,00,000 in tournament</p>
+                    <div class="games-showcase game-ludo">
+                        <div class="game-icon">
+                            <i class="fas fa-th-large"></i>
                         </div>
+                        <h4>Ludo</h4>
+                        <p>Classic Board Game</p>
                     </div>
                 </div>
+                <div class="col-md-4 mb-3">
+                    <div class="games-showcase game-carrom">
+                        <div class="game-icon">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <h4>Carrom</h4>
+                        <p>Disc-striking Game</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="games-showcase game-poker">
+                        <div class="game-icon">
+                            <i class="fas fa-club"></i>
+                        </div>
+                        <h4>Poker</h4>
+                        <p>Card Strategy Game</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="games-showcase game-teen">
+                        <div class="game-icon">
+                            <i class="fas fa-cards"></i>
+                        </div>
+                        <h4>Teen Patti</h4>
+                        <p>Popular Card Game</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="more-games">
+                <i class="fas fa-plus-circle me-2"></i> +100 More Exciting Games
             </div>
         </div>
     </div>
@@ -335,5 +419,4 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
